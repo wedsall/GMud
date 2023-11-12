@@ -12,7 +12,7 @@ Welcome to GMud, a modern take on the classic Multi-User Dungeon (MUD) experienc
 
 This code was tested in python 3.9 and 3.7.5.
 
-$./start.sh
+$./server.sh
 Server started, listening on port 50051.
 
 ![Start the gRPC client](images/grpc_client.PNG)

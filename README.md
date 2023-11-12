@@ -10,6 +10,8 @@ Welcome to GMud, a modern take on the classic Multi-User Dungeon (MUD) experienc
 
 ## Getting Started
 
+This code was tested in python 3.9 and 3.7.5.
+
 $./start.sh
 Server started, listening on port 50051.
 

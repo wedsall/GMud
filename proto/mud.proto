@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+package mud;
+
+// The gRPC service definition for MudService
+service MudService {
+  // Define an RPC method to execute a command
+  rpc ExecuteCommand(CommandRequest) returns (CommandResponse);
+  rpc Login(LoginRequest) returns (LoginResponse) {};
+  rpc KeepAlive(KeepAliveRequest) returns (KeepAliveResponse);
+  rpc StreamMessages(StreamMessagesRequest) returns (stream StreamMessagesResponse);
+}
+
+message LoginRequest {
+  string name = 1;
+  string password = 2; // if you're using passwords
+}
+
+message LoginResponse {
+  bool success = 1;
+  string message = 2;
+  string session_id = 3; // Used to manage the session
+}
+
+message LogoutRequest {
+  string session_id = 1; // The client sends the session_id to log out
+}
+
+message LogoutResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+// Message to send a command request
+message CommandRequest {
+  string command = 1;  // The command string entered by the user
+}
+
+// Message to receive a command response
+message CommandResponse {
+  string result = 1;  // The result or output of the command execution
+}
+
+message KeepAliveRequest {
+  string session_id = 1;
+}
+
+message KeepAliveResponse {
+  bool success = 1;
+}
+
+
+message StreamMessagesRequest {
+    string player_id = 1;
+}
+
+message StreamMessagesResponse {
+    string message = 1;
+}
+

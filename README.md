@@ -8,6 +8,14 @@ Welcome to GMud, a modern take on the classic Multi-User Dungeon (MUD) experienc
 2. **Inspired by ChatGPT**: The design and development of GMud are heavily influenced by the capabilities of ChatGPT, particularly in areas of natural language understanding and interaction.
 3. **Authored by 'Gorgar'**: GMud is a passion project of mine, Gorgar – a long-time MUD enthusiast and the admin of Dragonfire MUD. My experience and love for MUD games have been the driving force behind this project.
 
+## Getting Started
+
+$./start.sh
+Server started, listening on port 50051.
+
+![Start the gRPC client](images/grpc_client.PNG)
+
+
 ## Project Vision
 
 The purpose of GMud is to craft a MUD library that encapsulates the essence of traditional MUD games while embracing modern technology and security practices. GMud is designed with a clear separation between the core game code and the content creation (building) process.

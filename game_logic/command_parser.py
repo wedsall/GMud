@@ -69,7 +69,7 @@ class CommandParser:
             game_world.tell_room(current_room, f"{player.cap_name()} leaves {direction}.", exclude_players=players_to_exclude)
             new_room = game_world.load_room(exit_path)
             player.move_to_room(new_room)
-            new_desc = player.get_current_room().get_description('', player)
+            new_desc = player.get_current_room().get_description(player)
             game_world.tell_room(player.get_current_room(), f"{player.cap_name()} arrives.", exclude_players=players_to_exclude)
 
             return f"You move {direction}.\n{new_desc}"

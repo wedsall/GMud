@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to GMud, a modern take on the classic Multi-User Dungeon (MUD) experience. GMud stands out for several reasons:
+Welcome to GMud, a modern take on the classic Multi-User Dungeon (MUD) experience. The 'G' in GMud stands out for several reasons:
 
 1. **gRPC-Based Architecture**: At its core, GMud utilizes gRPC, a high-performance, open-source universal RPC framework, to handle network communication. This choice ensures a robust and efficient networking layer.
 2. **Inspired by ChatGPT**: The design and development of GMud are heavily influenced by the capabilities of ChatGPT, particularly in areas of natural language understanding and interaction.
@@ -28,6 +28,21 @@ The purpose of GMud is to craft a MUD library that encapsulates the essence of t
     - **Concurrency and Scalability**: Python's multi-threading capabilities, coupled with gRPC's efficient handling of client-server communications, ensure that GMud can handle multiple simultaneous interactions smoothly.
     - **Speed**: gRPC's use of HTTP/2 brings significant improvements in speed and performance over traditional communication protocols used in MUDs.
     - **Security**: With gRPC, there is an inherent improvement in security, especially when compared to the unencrypted nature of Telnet, the traditional protocol for MUDs. gRPC allows for secure communication channels, which is a critical aspect of modern online gaming.
+
+# Current Project Status
+
+## Scoping and Proof of Concept
+
+GMud is currently in the early stages of development, focusing on scoping and creating a proof of concept. Our efforts so far have been towards laying the groundwork for what we believe could be a revolutionary approach to MUD gaming. 
+
+### Gathering Feedback
+
+One of our immediate priorities is to gather feedback from the community. We are keen on understanding the perspectives and insights of MUD experts and enthusiasts alike. Their feedback is crucial in shaping the future direction of GMud.
+
+### Will It Sink or Float?
+
+At this stage, a key question we're exploring is: Will this new approach to MUD gaming sink or float? We're in the process of determining the viability and potential of GMud, and whether it stands up to scrutiny by seasoned MUD players and developers.
+
 
 ## Acknowledging the Roots
 

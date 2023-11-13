@@ -18,11 +18,11 @@ class GameWorld:
 
     def load_room(self, lua_script_path):
         # is the room already loaded?
-        if lua_script_path in self.world_rooms:
-            return self.world_rooms[lua_script_path]
+        if f"content/{lua_script_path}" in self.world_rooms:
+            return self.world_rooms["content/{lua_script_path}"]
 
         # Load the Lua script that defines the room
-        with open(lua_script_path, 'r') as file:
+        with open(f"content/{lua_script_path}", 'r') as file:
             lua_script = file.read()
  
         # Execute the Lua script and get the room definition
@@ -50,6 +50,7 @@ class GameWorld:
             for index, monster_def in monsters_definition.items():  # Use .items() here
                 monster_def_dict = dict(monster_def)
                 mpath = monster_def_dict.get('path')
+                mpath = f"content/{mpath}"
                 params = dict(monster_def_dict.get('params', {}))
                 #Expose these params to lua
                 self.lua.globals()["params"] = params

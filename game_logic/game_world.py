@@ -50,18 +50,23 @@ class GameWorld:
             for index, monster_def in monsters_definition.items():  # Use .items() here
                 monster_def_dict = dict(monster_def)
                 mpath = monster_def_dict.get('path')
-                mparams = dict(monster_def_dict.get('params', {}))
+                params = dict(monster_def_dict.get('params', {}))
+                #Expose these params to lua
+                self.lua.globals()["params"] = params
                 mcount = monster_def_dict.get('count', 1)  # Use default value 1 for count
-            
-                logger.info(mparams)
+        
+                # Load the Lua script that defines the monster
+                with open(mpath, 'r') as file:
+                    lua_script = file.read()
+                monster_definition = dict(self.lua.execute(lua_script))
+                logger.info(monster_definition)
 
                 for _ in range(mcount):  # Use mcount here
-                    mname=mparams.get('name')
-                    logger.info(f"Adding monster {mname} x {mcount}")
+                    # mname=params.get('name')
                     monster = Monster(
-                        name=mparams.get('name'),
-                        health=mparams.get('health'),
-                        attack_power=mparams.get('attack_power')
+                        name=monster_definition.get('name'),
+                        health=monster_definition.get('health'),
+                        attack_power=monster_definition.get('attack_power')
                     )
                     #self.world_monsters.append(monster)
                     monster.move_to_room(room)

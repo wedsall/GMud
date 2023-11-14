@@ -33,6 +33,22 @@ The purpose of GMud is to craft a MUD library that encapsulates the essence of t
 
 # Current Project Status
 
+## To-Do List for GMud Project
+
+| Task ID | Description                        | Status    | Notes                     |
+|---------|------------------------------------|-----------|---------------------------|
+| 1       | Object Save/Restore  | | So we can save players and other information in a standard way |
+| 2       | Login Procedure  | | Improve the basic login procedure we have today and passwords or equivalent |
+| 3       | Standard LUA variables/functions | | Standard way to decide what we expose to LUA and what functions it can call |
+| 4       | Rooms actions | | Standard add_action style commands from rooms |
+| 5       | Task/quest system | | Procedures a process for performing tasks and completing quests |
+| 6       | Armor | | Armor object and wear/remove procedure from player.py |
+| 7       | Weapon | | Weapon object and wield/unwield procedure from player.py |
+| 8       | Races | | Race definitions for players and npcs. Includes limbs, language, etc |
+| 9       | Skills/Spells | | Definitions for skills/spells in a central location |
+| 10      | Guilds | | They provide the skills/spells to players |
+| 11      | Combat | | Design the combat system |
+
 ## Scoping and Proof of Concept
 
 GMud is currently in the early stages of development, focusing on scoping and creating a proof of concept. Our efforts so far have been towards laying the groundwork for what we believe could be a revolutionary approach to MUD gaming. 

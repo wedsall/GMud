@@ -72,10 +72,6 @@ GMud is an open project, and collaboration is key to its growth and success. Whe
 
 ---
 
-Join us in this journey to redefine MUD gaming. Let's create something extraordinary together!
-
----
-
 For more information, visit [GMud Repository](https://github.com/wedsall/GMud).
 
 ---

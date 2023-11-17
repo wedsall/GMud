@@ -5,7 +5,7 @@
 Welcome to GMud, a modern take on the classic Multi-User Dungeon (MUD) experience. The 'G' in GMud stands out for several reasons:
 
 1. **gRPC-Based Architecture**: At its core, GMud utilizes gRPC, a high-performance, open-source universal RPC framework, to handle network communication. This choice ensures a robust and efficient networking layer.
-2. **Inspired by ChatGPT**: The design and development of GMud are heavily influenced by the capabilities of ChatGPT, particularly in areas of natural language understanding and interaction.
+2. **Inspired by ChatGPT**: The design and development of GMud are heavily influenced by ChatGPT. ChatGPT recommended the initial direction of gRPC as the base of GMud and provided guidance for many of the functions.
 3. **Authored by 'Gorgar'**: GMud is a passion project of mine, Gorgar – a long-time MUD enthusiast and the admin of Dragonfire MUD. My experience and love for MUD games have been the driving force behind this project.
 
 ## Getting Started

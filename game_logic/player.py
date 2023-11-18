@@ -1,9 +1,5 @@
-from dynamic_object import DynamicObject
-
 class Player:
     def __init__(self, name, starting_room, lua_file):
-        self.dynamic_attributes = DynamicObject(f'content/{lua_file}')
-        
         self.current_room = starting_room
         starting_room.add_player(self)
         self.name = name

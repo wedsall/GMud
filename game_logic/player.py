@@ -1,12 +1,12 @@
+from dynamic_object import DynamicObject
 
 class Player:
-    def __init__(self, name, starting_room):
+    def __init__(self, name, starting_room, lua_file):
+        self.dynamic_attributes = DynamicObject(f'content/{lua_file}')
+        
+        self.current_room = starting_room
+        starting_room.add_player(self)
         self.name = name
-        self.inventory = set()
-        self.current_room = starting_room  # Assign the starting room
-        starting_room.add_player(self)  # Add the player to the room
-        self.is_connected = False
-
     def move_to_room(self, room):
         if self.current_room:
             self.current_room.remove_player(self)

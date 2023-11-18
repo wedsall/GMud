@@ -51,6 +51,9 @@ class Room:
 
 
     def get_object_description(self, target):
+        for obj in self.players:
+            if obj.name.lower() == target.lower():
+                return obj.name
         for obj in self.monsters:
             if obj.name.lower() == target.lower():
                 return obj.name
